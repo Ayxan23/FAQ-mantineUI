@@ -42,7 +42,7 @@ export default function Faq() {
       onClick={(event) => {
         event.preventDefault();
         setActive(item.id);
-        fetchChildren(item.id);
+        if (active != item.id) fetchChildren(item.id);
       }}
     >
       <span>{item.title}</span>
